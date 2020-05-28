@@ -1,0 +1,184 @@
+html, body {
+    background-color: rgb(245, 206, 224);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    display: block;
+    padding: 10px 15px;
+   /* text-decoration: none;
+    outline: none;
+    transition: .5s linear;*/
+}
+
+
+.header {
+    height: 8vh;
+    background: #e20b77;
+    color: white;
+    font-size: 1rem;
+}
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul { 
+    /*сделать таблицу для меню*/
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    transition: .178s;
+    width: 200px;
+}
+
+.menu > li:hover {
+    background: rgb(148,181,243);
+    color: rgb(148, 181, 243);
+}
+.m1{
+    margin: 190px;
+}
+.m2{
+    margin: 190px;
+}
+.m3{
+    margin: 190px;
+}
+.menu .title {
+    height: 10vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .sec_menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background: #a3d0fd;
+    z-index: 1;
+}
+
+.sec_menu a {
+    color: white
+}
+
+.menu .title:hover + .sec_menu {
+    display: inline-block;
+}
+
+.menu .sec_menu:hover {
+    display: block;
+}
+
+.sec_menu > li:hover {
+    background: #98c9f7;
+}
+
+/*.submenu > li:hover > a {
+    color: #98c9f7;
+}
+*/
+.content {
+    height: 140vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.kartinochki {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kartinochki img {
+    width: 80%;
+    height: auto;
+   
+}
+
+.kartinochki #kisa {
+    width: 20vw;
+    height: auto;
+    justify-content: center;
+}
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+   
+}
+
+/* Общее */
+.maket1 .title{
+    text-align: center;
+}
+
+.poem, .me {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Стих */
+
+.poem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poem > div {
+    max-width: 50vw;
+}
+
+.poem .author {
+    width: 100%;
+    text-align: right;
+    font-weight: 500;
+    font-style: italic;
+}
+.maket1 .image img{
+    float: left;
+    margin: 5px 5px 5px 0;
+}
+
+.maket1 .text .title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+@media print {
+    img {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .banners {
+        display: none;
+    }
+
+    .content {
+        display: block;
+    }
+}

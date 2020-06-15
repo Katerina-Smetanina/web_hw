@@ -66,25 +66,43 @@ function matrix(){
        document.getElementById('out_mass').innerHTML= out_mass;
 }
 
-/*function getRandomInt(min, max){       //Принимает параметры min и max. Возвращает случайное целое число между min (включительно) и max (не включая max)
-    let rand = min - 0.5 + Math.random() * (max - min + 1);    
-    // return Math.round(rand);
-    
-     document.getElementById('out_Rand').innerHTML =rand;
-}*/
 function getRandomInt(min, max) {
+    /*min = document.getElementById('min').value;
+    min = parseFloat(min);
+    max = document.getElementById('max').value;
+    max = parseFloat(max);*/
+
     return Math.floor(Math.random() * (max - min)) + min;
-  }
-  
-  document.getElementById('out_rand').innerHTML= getRandomInt(8,17);
-
+}
                                
-
 function getArray(n){                  //Принимает размерность n Возвращает массив со сгенерированными значениями через функцию getRandomI
-    
-                               
+    let array = [];
+    for(let i=0; i<n; i++) {
+        array[i] = getRandomInt(1, 100);
+    }
+    return array;                     
 }
 
-function getResultArray(n){
-
+function compare(a, b) {
+    if (a < b) {
+        return -1;
+    }
+    if (a > b) {
+        return 1;
+    }
+    return 0;
 }
+ 
+function getResultArray(array) {
+    let newArray = array.slice([0], array.length);
+    newArray.sort(compare);
+    return newArray;
+}
+
+let array = getArray(6); 
+let sortArray = getResultArray(array); 
+ 
+console.log(array);
+console.log(sortArray);
+
+

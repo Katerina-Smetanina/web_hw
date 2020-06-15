@@ -1,0 +1,26 @@
+header {
+	margin-bottom: 5px;
+}
+header .nav-item{
+	margin-left: 102px;
+}
+.slide{
+	margin-bottom: 100px;
+}
+.card{
+  margin-right: 90px;
+  margin-bottom: 60px;
+}
+  .btn{    
+	margin-left: 42%;
+	margin-bottom: 50px;
+}
+.tlp{
+	margin-bottom: 10px;
+}
+.icon{
+	font-size: 24px;
+}
+.icon .row{
+	margin-bottom: 20px;
+}
